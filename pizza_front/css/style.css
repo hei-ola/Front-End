@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin : 0;
+    padding: 0;
+}
+
+*,
+*::before,
+::after {
+    box-sizing: inherit;
+}
+
+/*-----GENERALES------*/
+html {
+    box-sizing: border-box;
+    font-size : 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+body {
+    margin     : 0;
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5;
+}
+
+a {
+    text-decoration: none;
+}
+li{
+    font-size: 16px;
+}
+
+/*-----colores------*/
+.red {
+    color: #FC200C;
+}
+
+.green {
+    color: #39B24A;
+    ;
+}
+
+
+/*-----------header------------*/
+.header {
+    display         : flex;
+    justify-content : space-between;
+    background-color: #000000;
+    color           : #F3F3F3;
+    padding         : 0 30px;
+    height          : 100px;
+}
+
+.header-logo {
+    display    : flex;
+    align-items: center;
+}
+
+.header-logo h1 {
+    font-size  : 24px;
+    margin-left: 10px;
+}
+
+.nav {
+    display    : flex;
+    align-items: center;
+}
+
+.nav ul {
+    display   : flex;
+    list-style: none;
+}
+
+.nav ul li a {
+    color    : #FFFFFF;
+    padding  : 10px;
+}
+
+
+/*------main------*/
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.img-main{
+    background-image: url(../img/delivery.jpg);
+    width: 40%;
+    height: 400px;
+    background-size: cover;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.recetas-main{
+    width: 40%;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,0 +1,72 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+*,
+*::before,
+::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size : 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color      : $colorTerciario;
+}
+
+a {
+    text-decoration: none;
+    color          : $colorPrincipal;
+    @media ($media-mobile) {
+        font-size: 1.6rem;
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    @media ($media-mobile) {
+        font-size: 1.5rem;
+    }
+}
+
+h1 {
+    padding      : 1rem 1.5rem;
+    background   : $colorPrincipal;
+    font-weight  : 400;
+    border-radius: 0.5rem;
+    font-size    : 2rem;
+    margin-bottom: 1rem;
+    @media ($media-mobile) {
+        font-size: 3rem;
+    }
+    @media (min-width: 1200px) {
+        font-size: 4.2rem;
+    }
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    color    : $colorPrincipal;
+    font-size: 1.3rem;
+    @media ($media-mobile) {
+        font-size: 2rem;
+    }
+}
+
+.logo {
+    display: flex;
+    color  : $colorPrincipal;
+}
+
+ul {
+    list-style: none;
+}

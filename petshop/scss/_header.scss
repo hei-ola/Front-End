@@ -1,0 +1,72 @@
+/*pantallas pequeñas*/
+nav {
+    .nav-ul {
+        display: none;
+
+        @media ($media-mobile) {
+            display: flex;
+
+            & a {
+                padding-right: 2rem;
+
+                &:hover {
+                    color: $colorTerciario;
+                }
+            }
+        }
+    }
+
+    .hamburguesa {
+        @media ($media-mobile) {
+            display: none;
+        }
+    }
+}
+
+.header {
+    display: none;
+
+
+    @media ($media-mobile) {
+        position       : sticky;
+        z-index        : 2;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding        : 0 4rem;
+        height         : 2rem;
+        background     : #000000;
+        color          : $colorPrincipal;
+    }
+
+    form select {
+        background-color: black;
+        color           : $colorPrincipal;
+        border          : none;
+        font-family     : 'roboto', sans-serif;
+    }
+}
+
+/*---------header----------*/
+.color-nav {
+    background-color: $colorSecundario;
+
+    @media ($media-mobile) {
+        position: fixed;
+        width   : 100%;
+        top     : 0;
+        z-index : 1;
+    }
+}
+
+.nav {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    height         : 16vh;
+    padding        : 0px 15px;
+
+    span {
+        color: $colorTerciario;
+    }
+}

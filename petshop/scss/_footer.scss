@@ -1,0 +1,97 @@
+footer {
+    form {
+        background-color: $colorSecundario;
+        height          : 18vh;
+        display         : flex;
+        flex-direction  : column;
+        justify-content : center;
+
+        @media ($media-mobile) {
+            flex-direction : row;
+            justify-content: space-between;
+            padding        : 0 2rem;
+        }
+
+        .footer-form {
+            display        : flex;
+            align-items    : center;
+            justify-content: space-evenly;
+
+            @media ($media-mobile) {
+                h3 {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        input {
+            padding      : 1rem 5rem 1rem 1rem;
+            border-radius: 1.5rem;
+            border       : none;
+            margin-bottom: 0.5rem;
+            font-size    : 0.9rem;
+            outline      : none;
+        }
+
+        button {
+            border-radius   : 1.4rem;
+            padding         : 0.7rem 1rem;
+            background-color: $colorTerciario;
+            color           : $colorPrincipal;
+            margin-left     : 1rem;
+        }
+    }
+
+    .footer-contact {
+        background-color: $colorTerciario;
+        padding-bottom  : 2rem;
+        display         : grid;
+        justify-content : center;
+
+        @media ($media-mobile) {
+            justify-content: space-between;
+            padding        : 2rem 4rem;
+        }
+
+        .logo {
+            padding-top    : 2rem;
+            justify-content: center;
+            display        : flex;
+            align-items    : center;
+
+            span {
+                color: $colorSecundario;
+            }
+
+            @media ($media-mobile) {
+                justify-content: center;
+                grid-column    : 2;
+                grid-row       : 2;
+                justify-self   : end;
+            }
+
+        }
+
+        .footer-card {
+            display    : flex;
+            align-items: center;
+            padding    : 1rem;
+            grid-column: 1;
+
+            p {
+                color: #8A8787;
+            }
+        }
+    }
+
+    .footer-end {
+        background-color: #222222;
+        text-align      : center;
+        padding         : 0.5rem 0;
+        color           : $colorPrincipal;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
