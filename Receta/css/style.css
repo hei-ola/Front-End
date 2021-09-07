@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+*,
+*::before,
+::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing      : border-box;
+    font-size       : 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+    background-image: url(/img/1.jpg);
+}
+
+body {
+    width           : 70%;
+    margin          : 10rem auto;
+    background-color: #f7f4db;
+    border          : 10px solid #915a09;
+    border-radius   : 100px;
+    color           : #915a09;
+    font-size       : 2rem;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    body {
+      width: 95%;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+  }
+
+header {
+    text-align   : center;
+    padding-top  : 5rem;
+    margin-bottom: 5rem;
+}
+
+main {
+    width : 90%;
+    margin: 0 auto;
+}
+
+.img {
+    background-image: url(/img/lemon-pie1.png);
+    background-size : cover;
+    height          : 40rem;
+}
+
+footer {
+    text-align: center;
+    padding   : 5rem 0;
+}
