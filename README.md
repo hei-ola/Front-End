@@ -1,14 +1,9 @@
 ## Front-End
 Maquetación de paginas web
 
-PAGINA DE RECETA 
-https://hei-ola.github.io/Front-End/Receta 
 
-PAGINA DE PETSHOP
-https://hei-ola.github.io/Front-End/petshop
-
-PAGINA DE BATMAN
-https://hei-ola.github.io/Front-End/ejercicioPosition
+## PORTAFOLIO PRINCIPAL
+https://hei-ola.github.io/Front-End/principal
 
 
 ## INSTRUCCIONES PARA LA PAGINA DE BATMAN 
