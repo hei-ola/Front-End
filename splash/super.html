@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Superhero</title>
+    <link rel="stylesheet" href="css/stylePosition.css">
+</head>
+
+<body>
+    <div class="info">
+        <p>20% de descuento en todos los productos!</p>
+    </div>
+    <header class="header">
+        <a href="principal.html">
+            <img src="img/logo1.png" alt="logo">
+            <h1>Heroes</h1>
+        </a>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Añadí tu super!</h2>
+            <p>Agregá tu personaje favorito completando las opciones.</p>
+            <form action="#">
+                <label for="name">*Nombre</label>
+                <input type="text" id="name" required>
+
+                <label for="species">*Especie:</label>
+                <select name="species" id="species" required>
+                    <option value="especie">especie</option>
+                    <option value="especie1">especie1</option>
+                    <option value="especie2">especie2</option>
+                    <option value="especie3">especie3</option>
+                </select>
+
+                <label for="start">Fecha:</label>
+                <input type="date" id="start" value="dd/mm/aaaa" min="2020-01-01" max="2022-12-31">
+
+                <label for="file-hero" class="file-hero"><i class="fas fa-cloud-upload-alt"></i>Subir archivo</label>
+                <input type="file" id="file-hero" onchange='cambiar()'>
+                <div id="info"></div>
+
+                <textarea id="msg" name="user_message" placeholder="Descripcion"></textarea>
+                 
+                <p>Poderes</p>
+                <label><input type="checkbox" id="power">Volar</label>
+                <label><input type="checkbox" id="power">SuperInteligencia</label>
+                <label><input type="checkbox" id="power">Vista de rayo láser</label>
+                <label><input type="checkbox" id="power">Billetera gorda</label>
+
+                <p>Tipo de personaje</p>
+                <label><input type="radio" name="tipe">Héroe / Heroina</label>
+                <label><input type="radio" name="tipe">Villano / Villana</label>
+
+                <button type="submit">Añadir</button>
+                    
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Todos los derechos reservados a FRONT END 1 &copy;</p>
+        <a href="index.html">LOGIN</a>
+    </footer>
+
+    <script src="./js/super.js"></script>
+</body>
+
+</html>
