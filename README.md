@@ -8,7 +8,7 @@ PAGINA DE PETSHOP
 https://hei-ola.github.io/Front-End/petshop
 
 PAGINA DE BATMAN
-https://hei-ola.github.io/Front-End/ejercicioPosition
+https://hei-ola.github.io/Front-End/splash
 
 
 ## INSTRUCCIONES PARA LA PAGINA DE BATMAN 
