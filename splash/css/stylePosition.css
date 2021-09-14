@@ -323,14 +323,22 @@ input[type=file] {
     display: none;
 }
 
-.file-hero{
-    padding: 5px 10px;
+.file-hero {
+    padding   : 5px 10px;
     background: #f55d3e;
-    color:#fff;
+    color     : #fff;
 }
- 
-.file-hero:hover{
-    color:#fff;
+
+.file-hero:hover {
+    color     : #fff;
     background: #f7cb15;
 }
+
 /*---------------------------------------*/
+
+/*------------Formulario---------------*/
+.container-form {
+    width           : 60%;
+    background-color: #00669F;
+    margin          : 0 auto;
+}
