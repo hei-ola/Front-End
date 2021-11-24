@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="change-color">
+        <!--esta calse me cambia mi a modo nocturno todo el documento-->
+        <div class="container center">
+            <header class="first-header">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo-mobile.svg" alt="logo">
+                    </a>
+                </div>
+
+                <nav class="nav">
+                    <!--menu hamburguesa -->
+                    <div class="burger uno">
+                        <img src="./img/burger.svg" alt="tres lineas">
+                    </div>
+                    <div class="first-burger dos">
+                        <img src="./img/button-close.svg" alt="x">
+                    </div>
+                    <div class="enlaces">
+                        <a id="modo-clase">Modo Nocturno</a>
+                        <a href="./favoritos.html">Favoritos</a>
+                        <a class="favoritos">Mis GIFOS</a>
+                        <a class="agregar" href="./upload.html">
+                            <img id="img-max" src="./img/button-crear-gifo.svg" alt="+">
+                        </a>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="title-favorito">
+                <img src="./img/icon-mis-gifos.svg" alt="carita mis gifos">
+                <h1>Mis GIFOS</h1>
+            </div>
+            <div class="sin-contenido">
+                <img src="./img/icon-mis-gifos-sin-contenido.svg" alt="sin contenido">
+                <span>¡Anímate a crear tu primer GIFO!</span>
+            </div>
+
+            <!--iconos de eliminar descargar y ampliar gif guardado en favoritos-->
+            <div class="hover">
+                <a id="save-gif">
+                    <img src="./img/icon_trash.svg" alt="icon-fav-active">
+                </a>
+                <a id="download-gif">
+                    <img src="./img/icon-download.svg" alt="icon-download">
+                </a>
+                <a id="max-gif" href="./gifAmpliado.html">
+                    <img src="./img/icon-max.svg" alt="icon-max">
+                </a>
+            </div>
+
+            <div id="search-gifs-fav" class="gif-click"></div>
+            <div class="sin-contenido">
+                <img src="./img/icon-fav-sin-contenido.svg" alt="sin contenido">
+                <span>"¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"</span>
+            </div>
+            <img src="./img/CTA-ver-mas.svg" class="ver-mas" alt="ver mas">
+        </div>
+        <main>
+            <div class="gifos">
+                <h2>Trending GIFOS</h2>
+                <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+
+
+                <!--iconos de favoritos "guardar" ampliar y descargar -->
+                <div class="hover-slider">
+                    <a class="save-gif">
+                        <img src="./img/icon-fav-active.svg" alt="icon-fav-active">
+                    </a>
+                    <a class="download-gif">
+                        <img src="./img/icon-download.svg" alt="icon-download">
+                    </a>
+                    <a class="max-gif" href="./gifAmpliado.html">
+                        <img src="./img/icon-max.svg" alt="icon-max">
+                    </a>
+                </div>
+
+                <!--CARRUSEL-->
+                <div class="carrusel container">
+                    <img class="carrusel-izq" src="./img/button-slider-left.svg" alt="izq">
+                    <div id="img-gif" class="gif-click carrusel">
+                        <!--gif de apis-->
+                    </div>
+                    <img class="carrusel-derecho" src="./img/Button-Slider-right.svg" alt="derecha">
+                </div>
+
+                <div class="carrusel1">
+                    <img class="carrusel-izq1" src="./img/button-slider-left.svg" alt="izq ">
+                    <div id="img-gif1" class="gif-click carrusel1">
+                        <!--gif de apis-->
+                    </div>
+                    <img class="carrusel-derecho1 icon-carrusel" src="./img/Button-Slider-right.svg" alt="derecha ">
+                </div>
+                <!--CIERRE CARRUSEL-->
+            </div>
+        </main>
+
+        <div id="border">
+            <footer class="footer container">
+                <div class="footer-container">
+                    <p>Compartir en:</p>
+                    <div class="icons">
+                        <a href="https://es-la.facebook.com/"><img class="icon-facebook" src="./img/icon_facebook.svg" alt="icon_facebook"></a>
+                        <a href="https://twitter.com/?lang=es"><img class="icon-twitter" src="./img/icon-twitter.svg" alt="icon-twitter"></a>
+                        <a href="https://www.instagram.com/?hl=es-la"><img class="icon-instagram" src="./img/icon_instagram.svg" alt="icon_instagram"></a>
+                    </div>
+                </div>
+                <p>© GIFOS 2020 All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./js/slider.js"></script>
+    <script src="./js/misgifos.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
