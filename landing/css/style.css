@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+    font-family: 'IBM Plex Mono';
+    color: #060A24;
+}
+
+*,
+*::before,
+ ::after {
+    box-sizing: inherit;
+}
+
+
+/*  GLOBALES   */
+
+h1,
+h2 {
+    font-family: 'IBM Plex Sans';
+    font-size: 3.6rem;
+    font-weight: 300;
+    line-height: 4.2rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    color: #060A24;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #060A24;
+    font-size: 1.6rem;
+    font-family: 'IBM Plex Mono';
+}
+
+.container {
+    /* max-width: 100%; */
+    width: 90%;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/*   NAVEGADOR   */
+
+.items-ppal a {
+    line-height: 5rem;
+    padding-left: 1.5rem;
+    color: #ffffff;
+}
+
+.items-ppal a:hover {
+    color: #00F3BB;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
+.items-ppal a:active {
+    color: rgba(6, 10, 36, 0.56);
+}
+
+.items-ppal img {
+    margin-left: 1rem;
+}
+
+.items-ppal input[type="checkbox"],
+.items-ppal .fa-bars,
+.items-ppal .fa-times {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 2rem;
+    top: 0;
+    cursor: pointer;
+}
+
+.items-ppal .fa-bars,
+.items-ppal .fa-times {
+    font-size: 2rem;
+    pointer-events: none;
+}
+
+.items-ppal input[type="checkbox"] {
+    opacity: 0;
+}
+
+.items-ppal {
+    position: relative;
+    min-height: 2rem;
+    top: 1rem;
+    left: 0rem;
+}
+
+.items-ppal .nav {
+    display: none;
+}
+
+@keyframes items {
+    from {
+        height: 0rem;
+        opacity: 0;
+    }
+    to {
+        height: 20rem;
+        opacity: 1;
+    }
+}
+
+@keyframes close {
+    from {
+        height: 20rem;
+        opacity: 1;
+    }
+    to {
+        height: 0rem;
+        opacity: 0;
+    }
+}
+
+.items-ppal input:checked~.nav {
+    display: block;
+    background: #0000FF;
+    animation: items 1s ease;
+}
+
+.items-ppal input:not(:checked)~.nav {
+    display: block;
+    animation: close 1s ease forwards;
+}
+
+.items-ppal input:checked~.fa-bars {
+    display: none;
+}
+
+.items-ppal input:not(:checked)~.fa-times {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .items-ppal input:not(:checked)~.nav {
+        animation-name: none;
+    }
+    .items-ppal .fa-bars,
+    .items-ppal .fa-times {
+        display: none;
+    }
+    .items-ppal img {
+        width: 3.6rem;
+    }
+    .items-ppal .nav {
+        display: block;
+    }
+    .items-ppal a {
+        color: #060A24;
+        margin-left: 3rem;
+    }
+    .items-ppal ul {
+        display: flex;
+        background-color: #ffffff;
+        /*si esta abierto mi menu cambiara a blanco*/
+    }
+    .items-ppal {
+        display: flex;
+        justify-content: space-between;
+    }
+    .cont {
+        /*container dos */
+        max-width: 100%;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+}
+
+
+/*    HEADER    */
+
+.title-ppal {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.title-ppal h1 {
+    margin-bottom: 1.6rem;
+    width: 90%;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding: 1.7rem;
+    margin-top: 3.6rem;
+    background-color: #00F3BB;
+    font-weight: 600;
+    position: relative;
+}
+
+.btn:hover {
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+@media (min-width:768px) {
+    .title-ppal {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15rem;
+        margin-bottom: 0;
+    }
+    .title-ppal h1 {
+        font-size: 6.4rem;
+    }
+    .title-ppal p {
+        visibility: hidden;
+        width: 57%;
+    }
+    .btn {
+        width: 24%;
+        text-align: center;
+    }
+    .title-ppal p::before {
+        font-size: 1.6rem;
+        content: 'El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.';
+        visibility: visible;
+    }
+}
+
+
+/*  - BOTTOM -  */
+
+@media (min-width:448px) and (max-width:767px) {
+    .btn {
+        width: 40%;
+        text-align: center;
+    }
+}
+
+
+/*    IFRAME   */
+
+.section-color {
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+}
+
+.iframe {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 8rem;
+}
+
+.svg-top {
+    margin-top: -2px;
+}
+
+.iframe iframe {
+    width: 27rem;
+    height: 16rem;
+    border: none;
+}
+
+.section-iframe h2 {
+    color: #ffffff;
+    padding-bottom: 2.2rem;
+}
+
+.svg-bottom {
+    margin-bottom: -4px;
+}
+
+@media (min-width:768px) {
+    .section-iframe h2 {
+        margin-top: -6rem;
+    }
+    .iframe iframe {
+        width: 40rem;
+        height: 20rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .section-iframe h2 {
+        margin-top: -12rem;
+        font-size: 4.8rem;
+        margin-bottom: 1.2rem;
+    }
+    .iframe iframe {
+        width: 52rem;
+        height: 23.2rem;
+        margin-bottom: 6rem;
+    }
+    .iframe {
+        justify-content: space-evenly;
+        margin-bottom: 0;
+    }
+}
+
+
+/* IMAGEN CELULAR  */
+
+.imagen img {
+    margin-top: -11rem;
+    margin-bottom: 2.7rem;
+}
+
+.article-img p:last-of-type {
+    margin-top: 1rem;
+    /*separacion de parrafos*/
+}
+
+@media (min-width:600px) {
+    .imagen img {
+        width: 80%;
+    }
+    .imagen {
+        justify-items: center;
+        display: grid;
+    }
+    .article-img {
+        display: grid;
+        grid-template: 1fr / 50% 50%;
+        /* grid-gap: 10rem; */
+    }
+    .article-img article {
+        width: 90%;
+    }
+    .article-img h2 {
+        font-size: 3.8rem;
+        margin-bottom: 1.4rem;
+    }
+    .article-img p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .imagen img {
+        margin-top: -23rem;
+        width: 67%;
+    }
+    .imagen {
+        justify-items: center;
+        display: grid;
+    }
+    .article-img {
+        display: grid;
+        grid-template: 1fr / 50% 50%;
+        /* grid-gap: 10rem; */
+    }
+    .article-img article {
+        width: 90%;
+    }
+    .article-img h2 {
+        font-size: 4.8rem;
+        margin-bottom: 2.4rem;
+    }
+    .article-img p {
+        font-size: 1.6rem;
+    }
+}
+
+
+/*IMAGENES MUJERES*/
+
+.titles {
+    margin-top: 5.4rem;
+}
+
+.photos-women img {
+    display: flex;
+}
+
+.titles h2 {
+    margin-bottom: 4rem;
+}
+
+@media (min-width:600px) {
+    .photos-women {
+        display: grid;
+        grid-template: 1fr 1fr 1fr/50% 50%;
+    }
+}
+
+@media (min-width:1024px) {
+    .photos-women {
+        display: grid;
+        grid-template: 50% 50%/1fr 1fr 1fr;
+    }
+    .titles h2 {
+        font-size: 4.8rem;
+    }
+}
+
+
+/* ALGUNOS DE NUESTROS TEMAS */
+
+.themes h3 {
+    font-size: 2.4rem;
+    color: #060A24;
+    font-family: 'IBM Plex Sans';
+    font-weight: 600;
+}
+
+.themes {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+@media (min-width:957px) {
+    .section-themes {
+        display: flex;
+        width: 70%;
+        margin: auto;
+    }
+    .themes {
+        width: 25%;
+    }
+}
+
+
+/*LAS ULTIMAS NOVEDADES*/
+
+.finish h2 {
+    text-align: center;
+    color: #ffffff;
+    width: 60%;
+}
+
+.finish {
+    padding-bottom: 6rem;
+}
+
+@media (min-width:768px) {
+    .finish h2 {
+        font-size: 4.8rem;
+    }
+    .finish-footer {
+        position: relative;
+        bottom: 5rem;
+    }
+}
+
+
+/*   FOOTER*/
+
+.footer {
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+}
+
+.footer-year {
+    font-size: 1.4rem;
+    color: #060A24;
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5rem;
+}
+
+.footer-icon .fab {
+    font-size: 1.6rem;
+    line-height: 7rem;
+}
+
+.footer-icon {
+    display: grid;
+    grid-template: 100%/1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 3.6rem;
+}
+
+@media (min-width:768px) {
+    .footer {
+        flex-direction: row;
+    }
+    .footer-year {
+        font-size: 1.6rem;
+        padding: 0;
+    }
+    .footer-icon .fab {
+        font-size: 1.8rem;
+    }
+}
